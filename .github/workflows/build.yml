@@ -19,18 +19,18 @@ jobs:
       - name: Determine next version
         id: version
         run: |
+          # Получаем последний тег вида v1, v2, ...
           latest_tag=$(git tag --sort=-version:refname | grep -E '^v[0-9]+$' | head -n1)
-          if [[ -z "$latest_tag" ]]; then
-            echo "NEXT_VERSION=v1"
-            echo "NEXT_VERSION_NUM=1"
+          if [ -z "$latest_tag" ]; then
+            next_version="v1"
+            next_version_num=1
           else
-            num=${latest_tag
-            next_num=$((num + 1))
-            echo "NEXT_VERSION=v$next_num"
-            echo "NEXT_VERSION_NUM=$next_num"
+            num=${latest_tag#v}
+            next_version_num=$((num + 1))
+            next_version="v$next_version_num"
           fi
-          echo "NEXT_VERSION=${NEXT_VERSION}" >> $GITHUB_OUTPUT
-          echo "NEXT_VERSION_NUM=${NEXT_VERSION_NUM}" >> $GITHUB_OUTPUT
+          echo "NEXT_VERSION=$next_version" >> $GITHUB_OUTPUT
+          echo "NEXT_VERSION_NUM=$next_version_num" >> $GITHUB_OUTPUT
 
       - name: Create flat zip archive
         run: |
