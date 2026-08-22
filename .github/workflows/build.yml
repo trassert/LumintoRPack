@@ -36,6 +36,12 @@ jobs:
         run: |
           zip -r Luminto.zip . -x "*.git*" -x "__pycache__/*" -x ".git/*" -x ".github/*"
 
+      - name: Generate SHA1 checksum
+        id: sha1
+        run: |
+          sha1=$(sha1sum Luminto.zip | cut -d' ' -f1)
+          echo "SHA1=$sha1" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v3
@@ -49,3 +55,5 @@ jobs:
             Автоматический релиз №${{ steps.version.outputs.NEXT_VERSION_NUM }}.
             
             Содержимое репозитория упаковано в `Luminto.zip` без вложенной папки.
+            
+            **SHA1:** `${{ steps.sha1.outputs.SHA1 }}`
