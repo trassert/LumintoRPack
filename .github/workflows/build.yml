@@ -53,7 +53,5 @@ jobs:
           files: Luminto.zip
           body: |
             Автоматический релиз №${{ steps.version.outputs.NEXT_VERSION_NUM }}.
-            
-            Содержимое репозитория упаковано в `Luminto.zip` без вложенной папки.
-            
+
             **SHA1:** `${{ steps.sha1.outputs.SHA1 }}`
