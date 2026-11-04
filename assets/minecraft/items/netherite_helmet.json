@@ -1,0 +1,191 @@
+{
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 1,
+        "model": { "model": "luminto:accessories/clown_hat", "type": "model" }
+      },
+      {
+        "threshold": 2,
+        "model": { "model": "luminto:accessories/crown", "type": "model" }
+      },
+      {
+        "threshold": 3,
+        "model": { "model": "luminto:accessories/fedora", "type": "model" }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "model": "luminto:accessories/glasses_chupachups",
+          "type": "model"
+        }
+      },
+      {
+        "threshold": 5,
+        "model": {
+          "model": "luminto:accessories/glasses_lovely",
+          "type": "model"
+        }
+      },
+      {
+        "threshold": 6,
+        "model": { "model": "luminto:accessories/glitch_vfx", "type": "model" }
+      },
+      {
+        "threshold": 7,
+        "model": { "model": "luminto:accessories/gold_crown", "type": "model" }
+      },
+      {
+        "threshold": 8,
+        "model": { "model": "luminto:accessories/leaf_wings", "type": "model" }
+      },
+      {
+        "threshold": 9,
+        "model": {
+          "model": "luminto:accessories/rainbow_wings",
+          "type": "model"
+        }
+      },
+      {
+        "threshold": 10,
+        "model": { "model": "luminto:accessories/sh62", "type": "model" }
+      },
+      {
+        "threshold": 11,
+        "model": { "model": "luminto:accessories/sh65", "type": "model" }
+      },
+      {
+        "threshold": 12,
+        "model": { "model": "luminto:accessories/sh264", "type": "model" }
+      },
+      {
+        "threshold": 13,
+        "model": { "model": "luminto:accessories/sh266", "type": "model" }
+      },
+      {
+        "threshold": 14,
+        "model": { "model": "luminto:accessories/sh362", "type": "model" }
+      },
+      {
+        "threshold": 15,
+        "model": { "model": "luminto:accessories/sh368", "type": "model" }
+      },
+      {
+        "threshold": 16,
+        "model": { "model": "luminto:accessories/small_crown", "type": "model" }
+      },
+      {
+        "threshold": 17,
+        "model": {
+          "model": "luminto:accessories/spirit_dragons",
+          "type": "model"
+        }
+      },
+      {
+        "threshold": 18,
+        "model": { "model": "luminto:accessories/stellar_hat", "type": "model" }
+      },
+      {
+        "threshold": 19,
+        "model": { "model": "luminto:accessories/teddy_bear", "type": "model" }
+      },
+      {
+        "threshold": 20,
+        "model": { "model": "luminto:accessories/cat", "type": "model" }
+      },
+      {
+        "threshold": 21,
+        "model": { "model": "luminto:accessories/rabbit", "type": "model" }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:select",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_quartz_trim"
+          },
+          "when": "minecraft:quartz"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_iron_trim"
+          },
+          "when": "minecraft:iron"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_netherite_trim"
+          },
+          "when": "minecraft:netherite"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_redstone_trim"
+          },
+          "when": "minecraft:redstone"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_copper_trim"
+          },
+          "when": "minecraft:copper"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_gold_trim"
+          },
+          "when": "minecraft:gold"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_emerald_trim"
+          },
+          "when": "minecraft:emerald"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_diamond_trim"
+          },
+          "when": "minecraft:diamond"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_lapis_trim"
+          },
+          "when": "minecraft:lapis"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_amethyst_trim"
+          },
+          "when": "minecraft:amethyst"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:item/netherite_helmet_resin_trim"
+          },
+          "when": "minecraft:resin"
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/netherite_helmet"
+      },
+      "property": "minecraft:trim_material"
+    }
+  }
+}
